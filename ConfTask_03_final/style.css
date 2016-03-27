@@ -1,0 +1,130 @@
+
+#trialid
+{
+	display: block;
+	font-size: 20px;
+	margin: 50px auto;
+	width: 240px;
+	text-align: center;
+}
+
+#instr 
+{
+	display: block;
+	font-size: 25px;
+	margin: 50px auto;
+	width: 374px;
+	text-align: justify;
+}		
+
+#present, #type 
+{
+	display: block;
+	font-size: 65px;
+	letter-spacing: 5px;
+	margin: 100px auto;
+	font-weight: bold;
+	width: 170px;
+}
+
+#evaluate
+{
+	display: block;
+	font-size: 26px;
+	letter-spacing: 5px;
+	margin: 100px auto;
+	font-weight: bold;
+	/* width: 72%; */
+	text-align: center;
+}
+
+button, #submitid
+{
+	width: auto;
+	height: 39px;
+	margin: 5px;
+	font-size: 25px;
+	cursor:pointer;
+}
+
+#submitid
+{
+	display:none;
+}
+
+input#points 
+{
+	width: 265px;
+	zoom: 200%;
+	cursor:pointer;
+}
+
+#rangeamount 
+{
+	margin: 15px auto;
+	display: block;
+	width: 25px;
+	height: 45px;
+	font-size: 26px;
+}
+
+
+.answbutton
+{
+	font-size: 200%;
+	letter-spacing: 5px;
+	font-weight: bold;
+	width: 20%;
+	height: 83%;
+	margin: 0px 50px;
+	background: none;
+}
+
+
+#ConsentFrame {
+	background-color: white;
+	color: white;
+}
+
+#InstructionFrame {
+	background-color: white;
+	color: white;
+}
+
+#submitButton {
+	font-size: 25px;
+		color: black;
+	text-align: center;
+	display:none;
+}
+#explorerInst {
+background-color: white;
+font-size: 15px;
+color: black;
+text-align: center;
+}
+
+#trial {
+	font-size: 20px;
+		color: black;
+	text-align: center;
+}
+
+
+#comment , #endButton{
+	display:none;
+}
+
+#mturk_form{
+	display:none;
+}
+
+#ShowInstructions {
+	font-size: 10px;
+	color: black;
+	text-align: center;
+	position: absolute;
+	left: 25px;
+	top: 25px;
+	border-radius: 10px;
+}

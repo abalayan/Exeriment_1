@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Typing Main</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+		
+
+<div id="Demographics" style="text-align:center">
+	<p>As a part of the research we are collecting general demographic information. </p>
+	<p>You are not required to complete these questions. </p>
+	<p>However, doing so will help us better understand our results.</p>
+	<p>1. Country
+	<input id="Country" type="text"> </p>
+	<p>2.
+	<input id="Sex" type="radio" name="SexGroup" value="Male"> Male
+	<input id="Sex" type="radio" name="SexGroup" value="Female"> Female</p>
+	<p>3.  Age Range</p>
+	<input id="Age" type="radio" name="AgeGroup" value="20"> < 20
+	<input id="Age" type="radio" name="AgeGroup" value="25"> 20 - 25
+	<input id="Age" type="radio" name="AgeGroup" value="30"> 26 - 30
+	<input id="Age" type="radio" name="AgeGroup" value="35"> 31 - 35
+	<input id="Age" type="radio" name="AgeGroup" value="40"> 36 - 40<br>
+	<input id="Age" type="radio" name="AgeGroup" value="45"> 41 - 45
+	<input id="Age" type="radio" name="AgeGroup" value="50"> 46 - 50
+	<input id="Age" type="radio" name="AgeGroup" value="55"> 51 - 55
+	<input id="Age" type="radio" name="AgeGroup" value="60"> 56 - 60
+	<input id="Age" type="radio" name="AgeGroup" value="65"> 61 - 65
+	<input id="Age" type="radio" name="AgeGroup" value="70"> 66 and above<br>
+	<p>4. Handedness</p>
+	<input id="Hand" type="radio" name="HandGroup" value="Right"> Right
+	<input id="Hand" type="radio" name="HandGroup" value="Left"> Left
+	<input id="Hand" type="radio" name="HandGroup" value="Both"> Both
+	<p>5. Vision</p>
+	<input id="Vision" type="radio" name="VisionGroup" value="Normal"> Normal eyesight without needing glasses<br>
+	<input id="Vision" type="radio" name="VisionGroup" value="Corrected"> Corrected Vision (wear glasses)<br>
+	<input id="Vision" type="radio" name="VisionGroup" value="problems"> Poor eyesight and do not wear glasses<br>
+	<p>6. English Ability</p>
+	<input id="English" type="radio" name="EnglishGroup" value="First"> First-language speaker<br>
+	<input id="English" type="radio" name="EnglishGroup" value="Second"> Second-language speaker<br>
+	<input id="English" type="radio" name="EnglishGroup" value="None"> No English ability<br>
+	<button id="trial" onclick="goToTest()">Continue</button>
+</div>
+
+
+
+	<p id="previewMode" align="center" style="color:red"> 
+	You are in preview mode. To complete the hit close this window and accept hit before continuing
+	</p>
+
+	<div id="trialid"></div>
+	
+	<div id="instr"></div>	
+	
+	<div id="present"></div>
+	
+	<div id="type"></div>
+	
+	<div id="evaluate" align="center"></div>
+	
+<!--	<button onclick="goNextTrial()">Next</button> 
+
+-->
+
+<div id="TaskInstruct">
+<tr><td height="100%">
+<p align="center">
+<iframe id="InstructionFrame" width="60%" height="50%" src="TypingInstructions.htm"></iframe></p>
+</td></tr>
+</div>
+
+
+
+
+<!-- Button to show instruction during the test -->
+<button id="ShowInstructions" onclick="basicPopup2('TypingInstructions.htm');return false">Show Instructions</button>
+
+<script type="text/javascript" src="jquery-2.1.0.min.js"></script>	
+<script type="text/javascript" src="conftest_2.js"></script>
+<script type="text/javascript">
+
+		$("#data").hide();                //data field  - stays hidden
+		$("#submitButton").hide();             //submit data to Amazon - shows at end
+//		$("#getData").hide();           // submit data to data field - stays hidden
+		$("#ShowInstructions").show();  //hide optional button to show instructions during task
+		$("#TaskInstruct").hide();
+
+
+// Check if the worker is PREVIEWING the HIT or if they've ACCEPTED the HIT
+    //
+    if (window.opener.previewit == 1)
+    {
+ 	$("#previewMode").show();
+    } else {
+    $("#previewMode").hide();
+    window.opener.endofExp();
+    }	
+</script>	
+
+
+</body>	
+</html>
